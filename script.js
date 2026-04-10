@@ -4,7 +4,7 @@ async function loadComponent(id, file) {
     const data = await res.text();
     document.getElementById(id).innerHTML = data;
 
-    // só roda para o header
+    // sï¿½ roda para o header
     if (id === "header") {
         initHeader();
     }
@@ -13,17 +13,12 @@ loadComponent("header", "header.html");
 loadComponent("footer", "footer.html");
 
 
-// ===== FUNÇÕES DO HEADER =====
+// ===== FUNï¿½ï¿½ES DO HEADER =====
 function initHeader() {
 
     const toggle = document.getElementById("menu-toggle");
     const nav = document.getElementById("nav");
     const header = document.getElementById("main-header");
-
-    if (!toggle || !nav || !header) {
-        console.warn("Header não encontrado ainda");
-        return;
-    }
 
     // menu mobile
     toggle.addEventListener("click", () => {
@@ -50,4 +45,22 @@ function initHeader() {
             link.classList.add("active");
         }
     });
+}
+async function loadComponent(id, file) {
+    try {
+        const res = await fetch(file);
+        if (!res.ok) throw new Error(`Erro ao carregar ${file}: ${res.statusText}`);
+        const data = await res.text();
+        document.getElementById(id).innerHTML = data;
+
+        if (id === "header") {
+            initHeader();
+        }
+    } catch (error) {
+        console.error("Falha no loadComponent:", error);
+        // Exibe um aviso visual para vocÃª saber que o erro Ã© o protocolo file://
+        if (window.location.protocol === 'file:') {
+            console.warn("DICA: O fetch nÃ£o funciona via file://. Use um servidor local (F5 no Visual Studio).");
+        }
+    }
 }
