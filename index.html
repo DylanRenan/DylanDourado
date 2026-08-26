@@ -2,8 +2,12 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Dylan Dourado — Programador & Game Designer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,44 +19,105 @@
 
         <!-- HERO -->
         <section class="hero">
+            <div class="hero-bg"></div>
             <div class="container hero-content">
+                <p class="hero-label">Programador & Game Designer</p>
                 <h1>Olá, eu sou <span>Dylan Dourado</span></h1>
-                <p>Desenvolvedor focado em jogos e experiências digitais.</p>
-                <a href="projects.html" class="btn">Ver Projetos</a>
+                <p>Programador com foco em Unity (C#) e GameMaker. Crio jogos digitais e experiências interativas — do design ao código.</p>
+                <div class="hero-engines">
+                    <span class="engine-badge">Unity (C#)</span>
+                    <span class="engine-badge">GameMaker</span>
+                    <span class="engine-badge">Game Design</span>
+                    <span class="engine-badge">Programação</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-glow">Ver Projetos</a>
+                    <a href="https://mementumgames.itch.io" class="btn btn-outline" target="_blank" rel="noopener noreferrer">itch.io</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTADORES -->
+        <section class="counters container reveal">
+            <div class="counter-item">
+                <span class="counter-number" data-target="5">0</span>
+                <span class="counter-label">Projetos Criados</span>
+            </div>
+            <div class="counter-item">
+                <span class="counter-number" data-target="3">0</span>
+                <span class="counter-label">Engines</span>
+            </div>
+            <div class="counter-item">
+                <span class="counter-number" data-target="2">0</span>
+                <span class="counter-label">Anos em Game Dev</span>
             </div>
         </section>
 
         <!-- SOBRE RESUMO -->
-        <section class="about-preview container">
+        <section class="about-preview container reveal">
             <h2>Sobre mim</h2>
             <p>
-                Desenvolvedor com foco em criação de jogos e sistemas interativos,
-                utilizando ferramentas como Unity e GameMaker.
+                Programador com foco em Unity (C#) e GameMaker, atuando também como game designer.
+                Integro o estúdio <strong>Mementum Games</strong>, onde crio jogos digitais e analógicos.
+                Tenho background em desenvolvimento web, fotografia e edição de vídeo —
+                o que me dá uma visão ampla sobre criação de conteúdo e experiência do usuário.
             </p>
             <a href="about.html">Saiba mais →</a>
         </section>
 
-        <!-- PROJETOS -->
+        <!-- PROJETOS EM DESTAQUE -->
         <section class="projects-preview container">
-            <h2>Projetos em destaque</h2>
+            <h2 class="reveal">Projetos em destaque</h2>
 
             <div class="projects-grid">
 
-                <a href="https://sites.google.com/view/ruaserunas/página-inicial" class="project-card" target="_blank" rel="noopener noreferrer">
-                    <h3>Ruas e Runas</h3>
-                    <p>Jogo roguelike baseado em arte de rua. Geração de mapas e inimigos aleatórios.</p>
+                <a href="https://sites.google.com/view/catapimbas3d/início" class="project-card card-digital reveal" target="_blank" rel="noopener noreferrer">
+                    <div class="card-thumb">
+                        <img src="src/images/catapimbas.jpg" alt="Catapimbas" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-engine">Unity</span>
+                            <span class="tag tag-status tag-dev">Em dev</span>
+                        </div>
+                        <h3>Catapimbas</h3>
+                        <p>Dungeon crawler 3D com combate e geração procedural.</p>
+                    </div>
                 </a>
-                <a href="https://sites.google.com/view/ecosdeoflia/página-inicial" class="project-card" target="_blank" rel="noopener noreferrer">
-                    <h3>Ecos de Ofelia</h3>
-                    <p>Jogo de terror 2D com elemento de puzzles</p>
+
+                <a href="https://sites.google.com/view/ruaserunas/página-inicial" class="project-card card-digital reveal" target="_blank" rel="noopener noreferrer">
+                    <div class="card-thumb">
+                        <img src="src/images/ruas-e-runas.jpg" alt="Ruas e Runas" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-engine">Unity</span>
+                            <span class="tag tag-status tag-prototype">Protótipo</span>
+                        </div>
+                        <h3>Ruas e Runas</h3>
+                        <p>Roguelike urbano com mapas e inimigos aleatórios.</p>
+                    </div>
                 </a>
-                <a href="https://sites.google.com/view/catapimbas/página-inicial" class="project-card" target="_blank" rel="noopener noreferrer">
-                    <h3>Catapimbas</h3>
-                    <p >Jogo 3D doomlike.Atualmente em desenvolvimento.</p>
+
+                <a href="https://sites.google.com/view/ecosdeoflia/página-inicial" class="project-card card-digital reveal" target="_blank" rel="noopener noreferrer">
+                    <div class="card-thumb">
+                        <img src="src/images/ecos-de-ofelia.jpg" alt="Ecos de Ofélia" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-engine">GameMaker</span>
+                            <span class="tag tag-status tag-prototype">Protótipo</span>
+                        </div>
+                        <h3>Ecos de Ofélia</h3>
+                        <p>Terror 2D com pixel art e mecânica de luz.</p>
+                    </div>
                 </a>
-            
+
             </div>
 
+            <div class="see-all reveal">
+                <a href="projects.html">Ver todos os projetos →</a>
+            </div>
         </section>
 
     </main>

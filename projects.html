@@ -2,8 +2,12 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Projetos</title>
+    <title>Projetos - Dylan Dourado</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,33 +17,124 @@
 
     <main class="container projects-page">
 
-        <h1>Meus Projetos</h1>
+        <h1 class="reveal">Meus Projetos</h1>
 
-        <div class="projects-grid">
+        <!-- PROJETOS DIGITAIS -->
+        <section class="project-section">
+            <h2 class="section-title reveal">Projetos Digitais</h2>
+            <div class="projects-grid">
 
-            <a href="https://sites.google.com/view/catapimbas/página-inicial" class="project-card" target="_blank" rel="noopener noreferrer">
-                <h3>Catapimbas</h3>
-                <p >Jogo 3D doomlike.Atualmente em desenvolvimento.</p>
-            </a>
-            <a href="https://sites.google.com/view/ruaserunas/página-inicial" class="project-card" target="_blank" rel="noopener noreferrer">
-                    <h3>Ruas e Runas</h3>
-                    <p>Jogo roguelike baseado em arte de rua. Geração de mapas e inimigos aleatórios.</p>
-            </a>
-            <a href="https://sites.google.com/view/ecosdeoflia/página-inicial" class="project-card" target="_blank" rel="noopener noreferrer">
-                <h3>Ecos de Ofelia</h3>
-                <p>Jogo de terror 2D com elemento de puzzles</p>
-            </a>
-            
-            <a href="https://sites.google.com/view/mementum/página-inicial" class="project-card" target="_blank" rel="noopener noreferrer">
-                <h3>Mementum</h3>
-                <p >Jogo de cartas. Combate entre dois jogadores</p>
-            </a>
-            <a href="https://sites.google.com/view/tripulantesofelia/página-inicial" class="project-card" target="_blank" rel="noopener noreferrer">
-                <h3>Os Tripulantes de Ofelia</h3>
-                <p >Jogo analógico de estratégia em turnos. Exploração de mundo e tomada de decisões.</p>
-            </a>
+                <a href="https://sites.google.com/view/catapimbas3d/início" class="project-card card-digital reveal" target="_blank" rel="noopener noreferrer">
+                    <div class="card-thumb">
+                        <img src="src/images/catapimbas.jpg" alt="Catapimbas" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-engine">Unity</span>
+                            <span class="tag tag-status tag-dev">Em desenvolvimento</span>
+                        </div>
+                        <h3>Catapimbas</h3>
+                        <p>Jogo 3D de dungeon crawler (doomlike). Protótipo em desenvolvimento com geração procedural de mapas e combate.</p>
+                        <div class="card-links">
+                            <span class="card-link">Google Sites →</span>
+                            <span class="card-link">itch.io →</span>
+                        </div>
+                    </div>
+                </a>
 
-        </div>
+                <a href="https://sites.google.com/view/ruaserunas/página-inicial" class="project-card card-digital reveal" target="_blank" rel="noopener noreferrer">
+                    <div class="card-thumb">
+                        <img src="src/images/ruas-e-runas.jpg" alt="Ruas e Runas" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-engine">Unity</span>
+                            <span class="tag tag-status tag-prototype">Protótipo</span>
+                        </div>
+                        <h3>Ruas e Runas</h3>
+                        <p>Roguelike urbano com geração procedural de mapas e inimigos. Habilidade de movimentação e mira são vitais para chegar longe.</p>
+                        <div class="card-links">
+                            <span class="card-link">Google Sites →</span>
+                            <span class="card-link">itch.io →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://sites.google.com/view/ecosdeoflia/página-inicial" class="project-card card-digital reveal" target="_blank" rel="noopener noreferrer">
+                    <div class="card-thumb">
+                        <img src="src/images/ecos-de-ofelia.jpg" alt="Ecos de Ofélia" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-engine">GameMaker</span>
+                            <span class="tag tag-status tag-prototype">Protótipo</span>
+                        </div>
+                        <h3>Ecos de Ofélia</h3>
+                        <p>Jogo de terror e sobrevivência 2D com pixel art. A mecânica central envolve a luz como guia e fator de sobrevivência.</p>
+                        <div class="card-links">
+                            <span class="card-link">Google Sites →</span>
+                            <span class="card-link">itch.io →</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- PROJETOS ANALÓGICOS -->
+        <section class="project-section">
+            <h2 class="section-title reveal">Projetos Analógicos</h2>
+            <div class="projects-grid">
+
+                <a href="https://sites.google.com/view/mementum/página-inicial" class="project-card card-analog reveal" target="_blank" rel="noopener noreferrer">
+                    <div class="card-thumb">
+                        <img src="src/images/mementum.jpg" alt="Mementum" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-type">Jogo de Cartas</span>
+                            <span class="tag tag-status tag-prototype">Protótipo</span>
+                        </div>
+                        <h3>Mementum</h3>
+                        <p>Jogo de cartas com combate estratégico entre dois jogadores. Livro de regras, ilustrações e design de cartas.</p>
+                        <div class="card-links">
+                            <span class="card-link">Google Sites →</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://sites.google.com/view/tripulantesofelia/página-inicial" class="project-card card-analog reveal" target="_blank" rel="noopener noreferrer">
+                    <div class="card-thumb">
+                        <img src="src/images/tripulantes.jpg" alt="Os Tripulantes de Ofélia" loading="lazy">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-type">RPG de Mesa</span>
+                            <span class="tag tag-status tag-prototype">Protótipo</span>
+                        </div>
+                        <h3>Os Tripulantes de Ofélia</h3>
+                        <p>RPG de mundo aberto analógico. Exploração de mapa, cartas de eventos, personagens e sistema de engrenagens como moeda.</p>
+                        <div class="card-links">
+                            <span class="card-link">Google Sites →</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ESTÚDIO -->
+        <section class="studio-section reveal">
+            <h2 class="section-title">Estúdio</h2>
+            <div class="studio-card">
+                <h3>Mementum Games</h3>
+                <p>Estúdio independente formado por estudantes universitários apaixonados por criar experiências únicas e memoráveis. Nosso foco está em desenvolver jogos que combinem estratégia, narrativa e estilo próprio.</p>
+                <div class="studio-links">
+                    <a href="https://mementumgames.itch.io" target="_blank" rel="noopener noreferrer" class="btn btn-outline">itch.io →</a>
+                    <a href="https://www.instagram.com/mementum.games/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Instagram →</a>
+                </div>
+            </div>
+        </section>
 
     </main>
 
