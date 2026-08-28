@@ -28,6 +28,10 @@ body {
     display: flex;
 }
 
+h1, h2, h3, .logo a, .footer-logo {
+    font-family: 'Space Grotesk', 'Inter', Arial, sans-serif;
+}
+
 /* ===== CONTAINER ===== */
 .container {
     width: 90%;
@@ -522,6 +526,226 @@ main {
     font-size: 12px;
     color: #38bdf8;
     font-weight: 600;
+}
+
+/* ===== PROJECTS LISTING PAGE ===== */
+.projects-page {
+    padding: 90px 0;
+}
+
+.projects-page > h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0 0 80px;
+}
+
+.projects-page .section-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #38bdf8;
+    border-bottom: none;
+    margin: 60px 0 40px;
+    padding-bottom: 0;
+    letter-spacing: 1px;
+}
+
+.projects-page .section-title:first-of-type {
+    margin-top: 0;
+}
+
+.projects-page .project-section {
+    margin-bottom: 70px;
+}
+
+.projects-page .project-section:last-of-type {
+    margin-bottom: 0;
+}
+
+/* ===== PROJECT PAGE ===== */
+.project-page {
+    padding: 50px 0;
+}
+
+.project-back {
+    display: inline-block;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.project-back:hover {
+    color: #0ea5e9;
+    text-decoration: underline;
+}
+
+.project-hero {
+    text-align: center;
+    padding: 30px 0 40px;
+}
+
+.project-hero h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.project-hero .project-category {
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.project-hero-image {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1e293b;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+.project-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-description {
+    max-width: 750px;
+    margin: 40px auto;
+    text-align: center;
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.project-description strong {
+    color: #38bdf8;
+}
+
+/* ===== PROJECT META ===== */
+.project-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 40px 0;
+}
+
+.meta-item {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-left: 3px solid #38bdf8;
+    border-radius: 8px;
+    padding: 18px 20px;
+}
+
+.meta-item h3 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #64748b;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.meta-item p,
+.meta-item li {
+    color: #e2e8f0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.meta-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.meta-item li {
+    margin-bottom: 4px;
+}
+
+.meta-item li::before {
+    content: "•";
+    color: #38bdf8;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.meta-item a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.meta-item a:hover {
+    text-decoration: underline;
+}
+
+/* ===== PROJECT SECTION (blocks) ===== */
+.project-block {
+    margin: 40px 0;
+}
+
+.project-block h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1e293b;
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.project-block p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    max-width: 800px;
+}
+
+.project-block ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+}
+
+.project-block li {
+    color: #cbd5e1;
+    line-height: 1.7;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.project-block li::before {
+    content: "→";
+    color: #38bdf8;
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+/* ===== PROJECT ACTIONS ===== */
+.project-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 40px 0 20px;
+}
+
+/* layout digital/analog accent */
+.project-page.card-digital .meta-item {
+    border-left-color: #38bdf8;
+}
+
+.project-page.card-analog .meta-item {
+    border-left-color: #fb923c;
 }
 
 /* ===== STUDIO SECTION ===== */
@@ -1050,5 +1274,9 @@ button:hover {
 
     .card-thumb {
         height: 100px;
+    }
+
+    .project-hero h1 {
+        font-size: 28px;
     }
 }
