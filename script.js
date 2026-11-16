@@ -108,8 +108,60 @@ function animateCounter(el) {
 }
 
 
+// ===== CARROSSEL DE PROJETOS =====
+function initCarousels() {
+    document.querySelectorAll(".carousel").forEach(carousel => {
+        const track = carousel.querySelector(".carousel-track");
+        const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+        const prev = carousel.querySelector(".carousel-btn.prev");
+        const next = carousel.querySelector(".carousel-btn.next");
+        const dotsContainer = carousel.parentElement.querySelector(".carousel-dots");
+        if (!track || slides.length === 0) return;
+
+        let index = 0;
+
+        function update() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            if (dotsContainer) {
+                dotsContainer.querySelectorAll(".carousel-dot").forEach((dot, i) => {
+                    dot.classList.toggle("active", i === index);
+                });
+            }
+        }
+
+        if (dotsContainer) {
+            dotsContainer.innerHTML = "";
+            slides.forEach((_, i) => {
+                const dot = document.createElement("button");
+                dot.className = "carousel-dot" + (i === 0 ? " active" : "");
+                dot.type = "button";
+                dot.setAttribute("aria-label", `Ir para imagem ${i + 1}`);
+                dot.addEventListener("click", () => { index = i; update(); });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        if (prev) prev.addEventListener("click", () => {
+            index = (index - 1 + slides.length) % slides.length;
+            update();
+        });
+        if (next) next.addEventListener("click", () => {
+            index = (index + 1) % slides.length;
+            update();
+        });
+
+        if (slides.length <= 1) {
+            if (prev) prev.style.display = "none";
+            if (next) next.style.display = "none";
+            if (dotsContainer) dotsContainer.style.display = "none";
+        }
+    });
+}
+
+
 // ===== INICIALIZAR =====
 document.addEventListener("DOMContentLoaded", () => {
     initScrollReveal();
     initCounters();
+    initCarousels();
 });
